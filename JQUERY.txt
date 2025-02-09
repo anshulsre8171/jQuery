@@ -1,0 +1,219 @@
+bjQuery("rite less do more.)
+============================
+jQuery inventor of john resig  creaated in 2006.
+jQuery is javascript library.
+jQuery is developed completely based on javascript.
+jQuery is open source javascript library.
+jQuery is not replacement of javascript it simplifies the js tasks.
+
+Feature of jQuery
+==================
+simple
+Dom Traversing
+Dom manipulation
+event handling
+style modification
+effect and animations
+light weight library
+cross browser support
+interpreted
+
+-------------------------------------------
+Selector is used to select HTML element.
+
+$("css_selector")
+$("selector")
+
+ex- 
+$("#idName")			->	$("#box")
+$(".className")			->	$(".box")
+$("tag_name") 			->	$("div")
+$("groupSelector")		->	$("h1,h3,p")
+$("directChild")		->	$("div > h1")
+$("universolSelector")	->	$("*")
+
+
+------------------------
+functions
+
+val()
+text()
+html()
+css()
+attr()
+prop()
+
+show()
+hide()
+toggle()
+fadeIn()
+fadeout()
+fadeToggle()
+fadeTo()
+slideUp()
+slideDown()
+slideToggle()
+
+{ same as opacity:.0/1  display: none/block}
+
+addclass
+removeclasss
+toggleclass
+
+append / after
+prepend /before
+
+eq  (equal)
+lt (less then)
+gt (greter than)
+empty
+remove
+
+-------------------------------------------------------------------
+syntax==>
+---------
+
+<script>
+$(document).ready(function () {alert('this is pge load function')
+$('button').click(function(){alert('this is button click event')})
+})
+</script>
+
+--------------------------------------------------------------------
+$(this) -it means it is get and hold the cuurent element object.
+--------------------------------------------------------------------
+
+1.val() - val function is used to get/set value of selected form control.
+
+	get - syntax - var x= $("selector").val()
+	set - syntax - var y= $("selector").val(value)
+
+2. text()- is used to get or set text of selected HTML element. 
+
+	<h1> techpile technology pvt.ltd.</h1>
+
+	get - $("selector").text()
+		var x=$("h1").text()    // techpile technology pvt.Ltd.
+	set- $("selector").text()
+		var y=$("h2").text(x) 
+
+3. html()
+	get - $("selector").html()
+		var x=$("h1").html()    // <b></b>techpile technology pvt.Ltd.</b>
+	set- $("selector").html()
+		var y=$("h2").html(x)
+------------------------------------------------------------------------------
+
+
+4. css - css function is used  to set single or multiple css at a time on selected HTML.
+
+object.style.propertyName="value"
+object.style.fontSize="24px"
+
+single css
+
+	$("selector").css("propertyName","value");
+
+	$("div").css("background","red");
+	$("div").css("color","yellow");
+
+multiple css
+
+	$("selector").css( {"propertyName":"value","propertyName":"value","propertyName":"value"});
+
+	$("div").css( {"background":"red","color":"yellow"} );
+-----------------------------------------------------------------------------
+
+
+5.attr - attr fun is used to set/get attribute value of selected HTML tag.
+
+	get-    $("selector").attr("attributeName")
+	ex-	var a=$("img").attr("src")
+
+	set-    $("selector").attr("attributeName",value")
+	ex-	$("#imgbig").attr("src",a)
+
+----------------------------------------------------------------------------
+
+6.show - 
+SHOW fun is used to show selected HTML element.
+	syntx- $("selector").show(Speed)
+	      speed-time in mili sec |fast|slow|medium
+	     1 sec=1000ms
+
+	ex-$("div").show(5000)
+	   $("div").show("fast")
+	   $("div").show("slow")
+	   $("div").show("medium")
+
+7.hide()-
+hide fun is used to hide visible select HTML element.
+
+	syntx- $("selector").hide(Speed)
+	                     speed-time in mili sec |fast|slow|medium
+	                     1 sec=1000ms
+
+	ex-$("div").hide(5000)
+	   $("div").hide("fast")
+	   $("div").hide("slow")
+	   $("div").hide("medium")
+
+
+8.toggle()-
+it provides toggle between show and fun.
+	syntx- $("selector").toggle(Speed)
+----------------------------------------------------------------------------------------
+
+
+9.addClass()-
+it is used to add css class to the selected HTML tag.
+	syntax- $("selector").addClass("className")
+	exa: $("input").addClass("form-control")
+
+
+10.removeClass()-
+remove class function is used to remove css class from selected HTML tag
+
+	syntax- $("selector").removeClass("className")
+	exa: $("input").removeClass("form-control")
+----------------------------------------------------------------------------------------
+
+11. append()-
+append function is used to add content at the end of position to the selected HTML tag.
+	syntax- $(seleecter").append("content || html tags")
+	ex-  $("div").append("<b>this is b tag</b>")
+
+
+12.prepend()-
+prepend fun is used to add content at the start of position to selectes HTML tag.
+	syntax- $(seleecter").prepend("content || html tags")
+	ex-  $("div").prepend("<b>this is b tag</b>")
+
+
+13.after()-
+after fun is used to add content after selected HTML tag.
+	syntax- $(seleecter").after("content || html tags")
+	ex-  $("div").after("<b>this is b tag</b>")
+
+14.before()-
+before function is used to add content before slected HTML element.
+	syntax- $(seleecter").before("content || html tags")
+	ex-  $("div").before("<b>this is b tag</b>")
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
