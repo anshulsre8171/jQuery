@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<style >
+	p{
+		border: 10px solid orange;
+		width: 250px;
+	}
+
+</style>
+</head>
+<body>
+<script SRC="jquery-3.7.1.js" type=""></script>
+<!--
+<P id="p1">
+<b>welcome to techpile</b>
+<img src="images/img1.jpg" height="100px">
+</P>
+<h1></h1>
+<button>click me</button>
+
+<script >
+	$(document).ready(function () {
+		$("button").click(function(){
+			var x=$('#p1').html()
+			//alert(x)
+			$("h1").html(x)
+		})
+	})
+</script>
+-->
+
+<!-- <div>techpile technology</div>
+<button>set style</button>
+<script >
+$(document).ready(function () {
+	$("button").click(function(){
+		$("div").css("background","orange")
+		$("div").css("padding","30px")
+		$("div").css("color","white")
+		$("div").css("border","10px solid black")
+	}) })
+</script> -->
+
+<!-- 
+<p></p>
+<input id="pa1" type="password" placeholder="password" name=""></br></br>
+<input id="pa2" type="password" placeholder="confirm password" name=""></br></br>
+<button>save</button>
+<script >
+	$(document).ready(function () {
+		$("button").click(function(){
+			var a=$("#pa1").val()
+			var b=$("#pa2").val()
+			if (a==b) {
+				$("p").text("password match")
+				$("p").css("color","green")
+				$("#pa1").css("border","2px solid green")
+				$("#pa2").css("border","2px solid green")
+			}
+			else{
+				$("p").text("password not match")
+				$("p").css("color","red")
+				$("#pa1").css("border","2px solid red")
+				$("#pa1").css("border","2px solid red")
+			}
+		})
+	})
+</script> -->
+
+<!-- 
+<p></p> with help of variable
+<input id="pa1" type="password" placeholder="password" name=""></br></br>
+<input id="pa2" type="password" placeholder="confirm password" name=""></br></br>
+<button>save</button>
+<script >
+	$(document).ready(function () {
+		var p1=$("#pa1") ;var p2=$("#pa2")
+		var p=$("p")
+		$("button").click(function(){
+			var a=p1.val()
+			var b=p2.val()
+			if (a==b) {
+				p.text("password match")
+				p.css("color","green")
+				p1.css("border","2px solid green")
+				p2.css("border","2px solid green")
+			}
+			else{
+				p.text("password not match")
+				p.css("color","red")
+				p1.css("border","2px solid red")
+				p2.css("border","2px solid red")
+			}
+		})
+	})
+</script> -->
+
+<ul> 
+	<li>summer training</li>
+	<li>IT training</li>
+	<li>apperentice training</li>
+	<li>corporate training</li>
+</ul>
+<h1></h1>
+
+<script >
+	$(document).ready(function () {
+		$("li").click(function(){
+			var x=$(this).text()
+			$("h1").html(x)
+		})
+	})
+</script>
+
+</body>
+</html>
