@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>basic structur code</title>
+</head>
+<body>
+
+	<button id="btn">click me</button>
+<script src="jquery-3.7.1.js" type=""></script>
+<!-- Ist method
+<script > 
+jQuery(document).ready(function(){
+	alert('welcome to the world of jQuery')
+})
+</script>
+
+2nd method
+<script > 
+$(document).ready(function(){
+	alert('welcome to the world of jQuery')
+})
+</script>
+-->
+
+<script>
+$(document).ready(function () {alert('this is pge load function')
+$('#btn').click(function(){alert('this is button click event')})
+})
+</script>
+
+<hr/>
+text function
+<h1 id="a">anshul sharma</h1>
+<button id="btn1">click me</button>
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("#a").text("done")
+	})
+})
+</script>
+<hr/>
+
+swap text function 
+<h1 id="swap1">anshul</h1>
+<h1 id="swap2">sharma</h1>
+<button id="sbtn">swap text</button>
+
+<script>
+$(document).ready(function(){
+	$("#sbtn").click(function(){
+		var txt1=$("#swap1").text()
+		var txt2=$("#swap2").text()
+		$("#swap1").text(txt2)
+		$("#swap2").text(txt1)
+	})
+})
+</script>
+
+<hr/>
+html function
+<h1 id="a2">anshul sharma</h1>
+<button id="btn2">click me</button>
+
+<script>
+$(document).ready(function(){
+	$("#btn2").click(function(){
+		$("#a2").text("<b>done</b>")
+	})
+})
+</script>
+
+<hr/>
+html function using this keyword
+<h1 id="a3">anshul sharma</h1>
+
+<script>
+$(document).ready(function(){
+	$("#a3").click(function(){
+		$(this).html("<b><u>done</u></b>")
+	})
+})
+</script>
+
+<hr/>
+html function with onother tag
+<span id="s"></span>
+<div  id="a4">
+	<h3>anshul sharma</h3>
+	<h2>anshul sharma</h2>
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#a4").click(function(){
+		$("#s").html("<b><u>done</u></b>")
+	})
+})
+
+</script>
+<hr/>
+
+css() using click event single and multiline css
+<div id="d">anshul</div>
+<button id="bt1">single line css</button>
+<button id="bt2">multi line css</button>
+<script>
+	$(document).ready(function(){
+		$("#bt1").click(function(){
+			$("#d").css("background","red")
+			$("#d").css("text-align","center")
+			$("#d").css("font-size","15px")
+			$("#d").css("border","2px groove orange")
+		})
+		$("#bt2").click(function(){
+			$("#d").css({"background":"black","color":"white","font-size":"15px","border":"2px groove orange"})
+		})
+	})
+</script>
+
+
+<hr/>
+val() and css function using click event<br/>
+<input type="text" id="a7"/><span id="a6"></span>
+<button id="a5">click</button>
+
+<script>
+$(document).ready(function(){
+	$("#a5").click(function(){
+		var x=$("#a7").val()    //tag name bhi likh sakte h lekin agr ek tag ek se jyada bar use ho to id ya kisi or selector ka use kiya jaayega 
+		if(x==""){
+			$("#a6").text("invlid")
+			$("#a6").css("color","red")
+			$("#a7").css("border","2px solid red")
+		}
+		else{
+			$("#a6").text(x)
+			$("#a6").css("color","green")
+			$("#a7").css("border","1px solid black","color","green")
+		}
+	})
+})
+</script>
+<hr/>
+
+val() and css function using this keyword and focus event input-text<br/>
+<input type="text" id="a8"/><span id="a9"></span>
+
+<script>
+$(document).ready(function(){
+	$("#a8").keyup(function(){  //focus || keyup || keypress 
+		var x=$(this).val()
+		alert(x)
+		if(x==""){
+			$("#a9").text("invlid")
+			$("#a8").css("border","2px solid red")
+		}
+		else{
+			$("#a9").text(x)
+			$("#a9").css("color","green")
+			$("#a8").css({"border":"1px solid black","color":"green"})
+		}
+	})
+})
+</script>
+<hr/>
+
+val() and css function using this keyword and keyup event check pin code input-number<br/>
+<input type="number" id="a10"/><span id="a11"></span>
+
+<script>
+$(document).ready(function(){
+	$("#a10").keyup(function(){  //focus || keyup || keypress 
+		var x=$(this).val()
+	//	alert(x)
+		if(x.length==6){
+			$("#a11").text("valid code")
+			$("#a11").css("color","green")
+			$("#a11").css("border","2px solid green")
+			$("#a10").css("border","4px solid green")
+		}
+		else{
+			$("#a11").text("invalid")
+			 $("#a11").css("color","red")
+			$("#a11").css("border","1px solid red")
+			$("#a10").css("border","4px solid red")
+		}
+	})
+})
+</script>
+<hr/>
+
+
+val() and css function using this keyword and change event check file extention<br/>
+<input type="file" id="a12"/><span id="a13"></span>
+
+<script>
+$(document).ready(function(){
+	$("#a12").change(function(){  
+		var filename=$(this).val()
+	//	alert(filename)       //xyz.jpg
+		var ext=filename.slice(filename.lastIndexOf(".")+1).toLowerCase()
+		//alert(ext) 
+		
+		//var arr=filename.split(".")    //["abc","jpg"]
+		//alert(arr.pop())
+		//var ext=arr.pop().toLowerCase()
+		
+		if(ext=="jpg"||ext=="jpeg"||ext=="png"){
+			$("#a13").text("valid code")
+			$("#a13").css("color","green")
+		}
+		else{
+			$("#a13").text("invalid")
+			 $("#a13").css("color","red")
+		}
+	})
+})
+</script>
+<hr/>
+
+attr() input-filetype function click event<br/>
+
+<img src="./images/batman.jpg" id="a14" height="200px"/>
+
+<script>
+	$(document).ready(function(){
+		$("#a14").click(function(){
+			//var x=$(this).attr("src")
+			//alert(x)
+			$(this).attr("src","./images/kgf.jpg")
+		})
+	})
+</script>
+<hr/>
+
+
+prop() input-checkbox function change event <br/>
+
+<input type="checkbox" id="a15"/>I aggred to term and conditions
+<button id="a16" disabled>submit</button>
+
+<script>
+	$(document).ready(function(){
+		$("#a15").change(function(){
+			var x=$("#a16").prop("disabled")
+			if(x==true){
+				$("#a16").prop("disabled",false)
+			}
+			else{
+				$("#16").prop("disabled",true)
+			}
+		})
+	})
+</script>
+<hr/>
+
+
+prop() input-checkbox function change event <br/>
+
+<input type="checkbox" id="a15"/>I aggred to term and conditions
+<button id="a16" disabled>submit</button>
+
+<script>
+	$(document).ready(function(){
+		$("#a15").change(function(){
+			var x=$("#a16").prop("disabled")
+			if(x==true){
+				$("#a16").prop("disabled",false)
+			}
+			else{
+				$("#16").prop("disabled",true)
+			}
+		})
+	})
+</script>
+
+
+
+</body>
+</html>
