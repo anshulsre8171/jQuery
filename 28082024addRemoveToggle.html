@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style >
+		div{
+			width: 200px;
+			height: 100px;
+			background: red;
+
+		}
+		.x{
+			transform: rotate(360deg);
+			transition: 1s;
+			background: green;
+			border: 10px groove lightgreen;
+		}
+		.y{
+			transform: rotate(-360deg);
+			transition: 1s;
+			background: lightgreen;
+			border: 10px groove green;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<div id="a"> </div>
+	<div id="b"> </div>
+	<div id="c"> </div>
+	<div id="d"> </div>
+	<br/><br/>
+	<button id="btn1">add class </button>
+	<button id="btn2">remove class </button>
+	<button id="btn3"> toggle</button>
+</center>
+
+<script SRC="jquery-3.7.1.js" type=""></script>
+<script >
+	$(document).ready(function () {
+		$("#btn1").click(function(){
+			$("#a,#c").addClass("x")
+			$("#b,#d").addClass("y")
+		})
+		$("#btn2").click(function(){
+			$("#a,#c").removeClass("x")
+			$("#b,#d").removeClass("y")
+		})
+		$("#btn3").mouseenter(function(){
+			$("#a,#c").toggleClass("x")
+			$("#b,#d").toggleClass("y")
+		})
+	})
+</script>
+</body>
+</html>
