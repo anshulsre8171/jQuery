@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style >
+		#imgbig{
+			height: 300px;
+			border: 10px groove green;
+			padding: 20px;
+			box-shadow: 0px 0px 10px 2px black inset;
+		}
+			#imgsmall{
+			height: 120px;
+			border: 10px groove green;
+			padding: 20px;
+			box-shadow: 0px 0px 10px 2px black inset;
+		}
+		.d{
+			height: 300px;
+			width: 300px;
+			background: orange;
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<script SRC="jquery-3.7.1.js" type=""></script>
+
+<!--modal-->
+<!--
+<center><h1>image gallery</h1><hr/>
+<img src="images/img1.jpg" id="imgbig"><br/>
+<img src="images/kota.jpg" id="imgsmall">
+<img src="images/f1.jpg" id="imgsmall">
+<img src="images/avenge.jpg" id="imgsmall">
+<img src="images/f1.jpg" id="imgsmall">
+<img src="images/img1.jpg" id="imgsmall">
+
+
+</center>
+<script >
+	$(document).ready(function() {
+		$("img").click(function(){
+			var path=$(this).attr("src")
+			$("#imgbig").attr("src",path)
+
+		})
+	})
+
+</script>-->
+
+<!--hide show toggle SLIDEUP SLIDEDOWN SLIDETOGGLE FADEIN FADEOUT  FADETOGGLE-->
+
+<img src="images/img1.jpg" >
+<br/><br/>
+<br/>
+<button id="btn1">hide</button>
+<button id="btn2">show</button>
+<button id="btn3">toggle</button>
+<button id="btn4">slideUp</button>
+<button id="btn5">slideDown</button>
+<button id="btn6">slideToggle</button>
+<button id="btn7">fadeOUT</button>
+<button id="btn8">fadeIn</button>
+<button id="btn9">fadeToggle</button>
+
+<script >
+	$(document).ready(function () {
+		$("#btn1").click(function(){
+			$("img").hide(3000)
+		})
+		$("#btn2").click(function(){
+			$("img").show(3000)
+		})
+		$("#btn3").click(function(){
+			$("img").toggle(3000)
+		})
+		$("#btn4").click(function(){
+			$("img").slideUp(3000)
+		})
+		$("#btn5").click(function(){
+			$("img").slideDown(3000)
+		})
+		$("#btn6").click(function(){
+			$("img").slideToggle(3000)
+		})
+		$("#btn7").click(function(){
+			$("img").fadeOut(3000)
+		})
+		$("#btn8").click(function(){
+			$("img").fadeIn(3000)
+		})				
+		$("#btn9").click(function(){
+			$("img").fadeToggle(3000)
+		})		
+	})
+</script>
+
+
+<!--FORM TYPE TOGGLE-->
+
+<button id="bt1">register form</button>
+<button id="bt2">login form</button>
+
+<div class="d" id="reg">register</div>
+<div class="d" id="log">login</div>
+
+<script >
+	$(document).ready(function () {
+		$("#bt1").click(function() {
+			$("#reg").show("fast")
+			$("#log").hide("fast")
+		})
+		$("#bt2").click(function() {
+			$("#log").show("fast")
+			$("#reg").hide("fast")
+		})
+	})
+</script>
+
+</body>
+</html>
